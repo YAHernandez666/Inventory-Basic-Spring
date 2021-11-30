@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.training.springappInventory.business.services.IProductManager;
 
+//controlador para pagina principal del inventario
 @Controller
 public class InventoryController {
 
