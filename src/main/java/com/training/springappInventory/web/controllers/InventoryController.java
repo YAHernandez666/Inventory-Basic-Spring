@@ -22,13 +22,13 @@ public class InventoryController {
 
     @Autowired
     private IProductManager productManager;
-    
+
     @RequestMapping(value="/hello.htm")
     public ModelAndView handleRequest() {
         String now = (new Date()).toString();
         logger.info("Returning hello view with " + now);
 
-        Map<String, Object> myModel = new HashMap<String, Object>();
+        Map<String, Object> myModel = new HashMap<>();
         myModel.put("now", now);
         myModel.put("products", this.productManager.getProducts());
 

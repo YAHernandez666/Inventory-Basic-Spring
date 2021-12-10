@@ -7,7 +7,9 @@ import com.training.springappInventory.business.entities.Product;
 public class SimpleProductManager implements IProductManager {
 
 	private List<Product> products;
+	private Product product;
 
+	@Override
 	public void increasePrice(int percentage) {
 
 		if (products != null) {
@@ -22,9 +24,17 @@ public class SimpleProductManager implements IProductManager {
 		this.products = products;
 	}
 
+	@Override
 	public List<Product> getProducts() {
 
 		return products;
+	}
+
+	@Override
+	public void addProduct(String name, double price) {
+		product.setDescription(name);
+		product.setPrice(price);
+		
 	}
 
 }

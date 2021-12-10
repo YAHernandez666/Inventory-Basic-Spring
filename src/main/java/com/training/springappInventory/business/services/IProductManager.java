@@ -7,5 +7,9 @@ public interface IProductManager {
 	 public void increasePrice(int percentage);
 
 	 public List<Product> getProducts();
+	 
+	 public void addProduct(String name, double price);
+	 
+	 
 
 }

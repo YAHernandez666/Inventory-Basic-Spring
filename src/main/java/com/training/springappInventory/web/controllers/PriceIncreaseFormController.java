@@ -10,13 +10,13 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.training.springappInventory.business.services.PriceIncrease;
 import com.training.springappInventory.business.services.IProductManager;
+import com.training.springappInventory.business.services.PriceIncrease;
 
 @Controller
 @RequestMapping(value="/priceincrease.htm")
 public class PriceIncreaseFormController {
-	
+
 	  /** Logger for this class and subclasses */
     protected final Log logger = LogFactory.getLog(getClass());
 
@@ -29,7 +29,7 @@ public class PriceIncreaseFormController {
         if (result.hasErrors()) {
             return "priceincrease";
         }
-		
+
         int increase = priceIncrease.getPercentage();
         logger.info("Increasing prices by " + increase + "%.");
 

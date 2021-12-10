@@ -5,7 +5,7 @@ import javax.validation.constraints.Min;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 public class PriceIncrease {
-	
+
     protected final Log logger = LogFactory.getLog(getClass());
 
     @Min(0)

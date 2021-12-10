@@ -1,6 +1,7 @@
 package com.training.springappInventory.web.controllers;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.Map;
 
@@ -24,8 +25,8 @@ public class InventoryControllerTests {
     private InventoryController controller;
 
     @Test
-    public void testHandleRequestView() {	
-        ModelAndView modelAndView = controller.handleRequest();		
+    public void testHandleRequestView() {
+        ModelAndView modelAndView = controller.handleRequest();
         assertEquals("hello", modelAndView.getViewName());
         assertNotNull(modelAndView.getModel());
         @SuppressWarnings("unchecked")
