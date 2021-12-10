@@ -1,0 +1,27 @@
+package com.training.springappInventory.business.services;
+
+public class AddProduct {
+	
+	private String nameProduct;
+	private int priceProduct;
+
+	public String getNameProduct() {
+		return nameProduct;
+	}
+
+	public void setNameProduct(String nameProduct) {
+		this.nameProduct = nameProduct;
+	}
+
+	public int getPriceProduct() {
+		return priceProduct;
+	}
+
+	public void setPriceProduct(int priceProduct) {
+		this.priceProduct = priceProduct;
+	}
+	
+	
+	
+
+}

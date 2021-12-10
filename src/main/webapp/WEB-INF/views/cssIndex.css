@@ -1,0 +1,33 @@
+
+body{
+	  background-color: #FFD660;
+}
+
+.cabecera{
+	background-color: #C1F665;
+	border: 1px solid #ccc;
+ 	padding: 0 1rem;
+  	margin: 1rem;
+  	font-family: Arial;
+	
+	
+	
+}
+
+.btnincrease{
+	text-decoration:none;
+	font-weight: 600;
+	font-size: 20px;
+	color:#333333;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left:40px;
+	padding-right:40px;
+	background-color:#aef0b8;
+	border-color: #d8d8d8;
+	border-width: 3px;
+	border-style: solid;
+	border-radius:35px;
+	font-family: Arial;
+	
+}
