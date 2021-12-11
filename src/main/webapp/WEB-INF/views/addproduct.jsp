@@ -4,9 +4,7 @@
 <html>
 <head>
   <title><fmt:message key="title"/></title>
-  <style>
-    .error { color: red; }
-  </style>  
+  <style><%@include file="/WEB-INF/views/cssIndex.css"%></style>
 </head>
 <body>
 <h1><fmt:message key="addproduct.heading"/></h1>
@@ -14,7 +12,7 @@
 <form:form method="post" modelAttribute="addProduct">
   <table >
     <tr>
-      <td align="right" width="20%">Descripcion del product:</td>
+      <td align="right" width="20%">Descripcion del producto:</td>
         <td width="20%">
           <form:input path="nameProduct"/>
         </td>
@@ -37,10 +35,13 @@
   </table>
   
   <br>
-  <input type="submit" value="Execute">
+  <input  class="btnenviar"  type="submit" value="Guardar producto">
 </form:form>
+<br>
+<br>
+<br>
+<br>
 
-
-<a href="<c:url value="hello.htm"/>">Inicio</a>
+<a  class="btninicio" href="<c:url value="hello.htm"/>">Inicio</a>
 </body>
 </html>

@@ -10,14 +10,14 @@
   <style><%@include file="/WEB-INF/views/cssIndex.css"%></style>
   </head>
   
-  <body>
+  <body class="body">
   <div class="cabecera">
   	<h1><fmt:message key="heading"/></h1>
   </div>
     <p><fmt:message key="greeting"/> <c:out value="${model.now}"/></p>
     <h3>Productos en el inventario</h3>
     <c:forEach items="${model.products}" var="prod">
-      <c:out value="${prod.description}"/> <i>$<c:out value="${prod.price}"/></i><br><br>
+      <c:out value="${prod.description}"/> <a class="prices"><i>$<c:out value="${prod.price}"/></i></a><br><br>
     </c:forEach>
      <br>
    <div>
