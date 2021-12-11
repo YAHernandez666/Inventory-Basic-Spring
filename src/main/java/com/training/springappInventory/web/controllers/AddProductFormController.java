@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.training.springappInventory.business.services.IProductManager;
+import com.training.springappInventory.business.services.PriceIncrease;
 import com.training.springappInventory.business.services.AddProduct;
 
 @Controller
+@RequestMapping(value="/addproduct.htm")
 public class AddProductFormController {
 	
 	/** Logger for this class and subclasses */
@@ -22,7 +24,7 @@ public class AddProductFormController {
     @Autowired
     private IProductManager productManager;
     
-    @RequestMapping(value="/addproduct.htm", method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST )
     public String onSubmit(@Valid AddProduct addProduct, BindingResult result)
     {
         if (result.hasErrors()) {
@@ -30,12 +32,18 @@ public class AddProductFormController {
         }
 
         String name = addProduct.getNameProduct();
-        double price = addProduct.getPriceProduct();
+        Double price = addProduct.getPriceProduct();
         logger.info("se registro con nombre " + name );
 
         productManager.addProduct(name, price);
 
         return "redirect:/hello.htm";
+    }
+    
+   @RequestMapping(method = RequestMethod.GET)
+    protected AddProduct formBackingObject() {
+        AddProduct addProduct = new AddProduct();
+        return addProduct;
     }
     
 

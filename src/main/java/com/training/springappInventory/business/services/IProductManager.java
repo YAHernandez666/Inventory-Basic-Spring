@@ -8,7 +8,7 @@ public interface IProductManager {
 
 	 public List<Product> getProducts();
 	 
-	 public void addProduct(String name, double price);
+	 public void addProduct(String name, Double price);
 	 
 	 
 

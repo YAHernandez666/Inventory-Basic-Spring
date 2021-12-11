@@ -1,9 +1,14 @@
 package com.training.springappInventory.business.services;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 public class AddProduct {
 	
+	 protected final Log logger = LogFactory.getLog(getClass());
+	
 	private String nameProduct;
-	private int priceProduct;
+	private Double priceProduct;
 
 	public String getNameProduct() {
 		return nameProduct;
@@ -13,13 +18,14 @@ public class AddProduct {
 		this.nameProduct = nameProduct;
 	}
 
-	public int getPriceProduct() {
+	public Double getPriceProduct() {
 		return priceProduct;
 	}
 
-	public void setPriceProduct(int priceProduct) {
+	public void setPriceProduct(Double priceProduct) {
 		this.priceProduct = priceProduct;
 	}
+
 	
 	
 	

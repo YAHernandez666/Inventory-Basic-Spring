@@ -31,10 +31,10 @@ public class SimpleProductManager implements IProductManager {
 	}
 
 	@Override
-	public void addProduct(String name, double price) {
-		product.setDescription(name);
-		product.setPrice(price);
-		
+	public void addProduct(String name, Double price) {
+		Product newproduct = new Product();
+		newproduct.setDescription(name);
+		newproduct.setPrice(price);
 	}
 
 }
