@@ -6,7 +6,7 @@ GRANT ALL ON springappinventoryv2.* TO springappinventoryuser@localhost IDENTIFI
 USE springappinventoryv2;
 
 CREATE TABLE products (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
   description varchar(255),
   price decimal(15,2)
 );
